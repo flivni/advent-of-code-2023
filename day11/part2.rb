@@ -1,4 +1,6 @@
 module Dec11
+# Space complexity O(rows+cols) + O(galaxies)
+# Time complexity O(rows*cols) + O(galaxies^2)
 class Part2
   attr_reader :is_test, :data, :universe_expansion_factor, :galaxies, :acc_expand_cols, :acc_expand_rows
   def initialize(is_test: false, universe_expansion_factor: 2)
