@@ -22,7 +22,7 @@ class Part2
       end
     end
 
-    # We'll maintain row/col vectors that indicate the cumulative number expansions
+    # Maintain row/col vectors that indicate the cumulative number expansions
     # traveling left to right and top to bottom.
     @acc_expand_rows = acc_expand_vector(expand_rows)
     @acc_expand_cols = acc_expand_vector(expand_cols)
