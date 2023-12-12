@@ -28,7 +28,7 @@ I ended up implementing this.
 Observation: The number of rows that don't expand is guaranteed <= the number
 of galaxies. Same with cols. 
 
-I think the vectors I call accumulation vectors in part 2 can be compressed.
+The vectors I call accumulation vectors in part 2 can be compressed.
 These row/col vectors indicate the cumulative number expansions
 traveling top to bottom and left to right. So, a column vector might look like this:
 [0, 0, 1, 1, 1, 2, 2] which represents that when you are at column 6 or 7, the universe
