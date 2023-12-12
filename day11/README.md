@@ -32,11 +32,11 @@ The vectors I call accumulation vectors in part 2 can be compressed.
 These row/col vectors indicate the cumulative number expansions
 traveling top to bottom and left to right. So, a column vector might look like this:
 [0, 0, 1, 1, 1, 2, 2] which represents that when you are at column 6 or 7, the universe
-has expanded in two places to the left. If the universe is very sparce, most columns
+has expanded in two places to the left. If the universe is sparse, most columns
 will indicate expansion, so you will see long runs of numbers like:
 [1, 2, 3, 4, 5, 6, ... , 100, 100, 101, 102, ...]
 Here every column has undergone expansion except for column 101 which contains at least
 one galaxy.
 
 This vector can be compressed such that use a sparse array and only store the columns
-that *don't* expand, and we will have runs of increasing numbers between.
+that **don't** expand, and we will have runs of increasing numbers between.
