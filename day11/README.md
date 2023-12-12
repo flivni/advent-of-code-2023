@@ -14,9 +14,9 @@ Ironically, this was my first thought when I read the problem, and I think
 the implementation is simpler than my part1 solution. 
 
 ### Other ideas / potential improvements
-If the starting universe was very large, it might be nice to not read the
+~~If the starting universe was very large, it might be nice to not read the
 whole universe into a 2d-array. Instead, one could scan through the file
 and (1) build up the row and col accumulation vectors and (2) build the
 galaxy list. This again, ironically, makes the code simpler. But similarly,
 makes it a bit harder to debug. Thinking about it, I might just do this as
-a second pass.
+a second pass.~~
