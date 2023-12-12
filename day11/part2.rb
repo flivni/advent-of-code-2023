@@ -1,8 +1,8 @@
 module Dec11
 class Part2
-  attr_reader :is_test, :data, :age_multiplyer, :galaxies, :acc_expand_cols, :acc_expand_rows
-  def initialize(is_test: false, age_multiplyer: 2)
-    @is_test, @age_multiplyer = is_test, age_multiplyer
+  attr_reader :is_test, :data, :universe_expansion_factor, :galaxies, :acc_expand_cols, :acc_expand_rows
+  def initialize(is_test: false, universe_expansion_factor: 2)
+    @is_test, @universe_expansion_factor = is_test, universe_expansion_factor
 
     # expand_rows/expand_cols are vectors that indicate which rows/columns will expand.
     expand_rows = []
@@ -33,19 +33,17 @@ class Part2
   end
 
   def acc_expand_vector(expand_vector)
-    ret_vector = Array.new(expand_vector.length)
     acc = 0
-    expand_vector.each_with_index do |v, i|
+    expand_vector.map.with_index do |v, i|
       acc += 1 if v
-      ret_vector[i] = acc
+      acc
     end
-    ret_vector
   end
 
   def distance(g1, g2)
-    m = age_multiplyer - 1
-    (g1[:x] + acc_expand_cols[g1[:x]] * m - g2[:x] - acc_expand_cols[g2[:x]] * m).abs +
-      (g1[:y] + acc_expand_rows[g1[:y]] * m - g2[:y] - acc_expand_rows[g2[:y]] * m).abs
+    m = universe_expansion_factor - 1
+    (g1[:x] - g2[:x] + m * (acc_expand_cols[g1[:x]] - acc_expand_cols[g2[:x]])).abs +
+      (g1[:y] - g2[:y] + m * (acc_expand_rows[g1[:y]] - acc_expand_rows[g2[:y]])).abs
   end
 
   def sum_pairwise_distances
@@ -58,5 +56,4 @@ class Part2
     sum
   end
 end
-
 end

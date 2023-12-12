@@ -19,15 +19,15 @@ class Part2Test < Minitest::Test
   end
 
   def test_assert_puzzle_description_answers
-    dec11 = Dec11::Part2.new(is_test: true, age_multiplyer: 10)
+    dec11 = Dec11::Part2.new(is_test: true, universe_expansion_factor: 10)
     assert_equal 1030, dec11.sum_pairwise_distances
 
-    dec11 = Dec11::Part2.new(is_test: true, age_multiplyer: 100)
+    dec11 = Dec11::Part2.new(is_test: true, universe_expansion_factor: 100)
     assert_equal 8410, dec11.sum_pairwise_distances
   end
 
   def test_print_part2_answer
-    dec11 = Dec11::Part2.new(age_multiplyer: 1_000_000)
+    dec11 = Dec11::Part2.new(universe_expansion_factor: 1_000_000)
     puts "Part 2 answer: #{dec11.sum_pairwise_distances}"
   end
 end
