@@ -23,8 +23,7 @@ a second pass.~~
 
 I ended up implementing this.
 
-### Using sparse arrays to represent the accumulation vectors to get the space
-complexity down to O(galaxies).
+### Using sparse arrays to represent the accumulation vectors to get the space complexity down to O(galaxies).
 
 Observation: The number of rows that don't expand is guaranteed <= the number
 of galaxies. Same with cols. 
